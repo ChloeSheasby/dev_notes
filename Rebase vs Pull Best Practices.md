@@ -1,10 +1,15 @@
+# Rebase vs Pull Best Practices
+
 _I learned this from Isaac Hildebrandt._
+
+## Why Pulling From Main Is Bad
 
 If main has been updated, my inclination has always been to pull from main into my feature branch. However, this is not best practice:
 - Pulling from main lines all commits in history order.
 - Your 'source of truth' will remain at an older main instead of the new one.
 - If you happen to need to revert main, it's almost impossible--there isn't a clean line of where main is.
 
+## Why Rebasing To Main Is Good
 The thing to remember is the whatever main has is waayyyy more important than your branch.
 Here is why rebasing is much better:
 - Rebasing takes your branch, scoops up your commits, and makes the newest main the foundation of your branch.
@@ -12,6 +17,7 @@ Here is why rebasing is much better:
 - Then you resolve merge conflicts.
 - Thus your branch always stay based on the latest main instead of some pieced together main.
 
+## How To Rebase To Main
 Here is how to do that:
 1. Rebase to main.
 	1. Command Line: `git rebase origin/main` 
