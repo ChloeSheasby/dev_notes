@@ -1,4 +1,4 @@
-_I learned this from Isaac H._
+_I learned this from Isaac Hildebrandt._
 
 If main has been updated, my inclination has always been to pull from main into my feature branch. However, this is not best practice:
 - Pulling from main lines all commits in history order.
