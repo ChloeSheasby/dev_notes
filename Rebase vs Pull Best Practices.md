@@ -33,11 +33,11 @@ Here is how to do that:
 
 ## Visuals of Rebasing vs Merging/Pulling
 
-![[images/image-5.png]]
+![[./images/image-5.png]]
 [Differences Between Git Merge and Rebase — and Why You Should Care](https://blog.git-init.com/differences-between-git-merge-and-rebase-and-why-you-should-care/)
 
 <br/>
 
 
-![[images/git-merge-vs-rebase 1.png|300]]
+![[./images/git-merge-vs-rebase 1.png|300]]
 [Git Merge vs Rebase](https://www.softwaremeadows.com/posts/graphic_-_git_merge_vs_rebase/)
