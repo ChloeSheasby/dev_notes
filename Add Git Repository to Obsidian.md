@@ -16,4 +16,7 @@ git push --set-upstream origin main
 git add . && git commit -m "initial commit" && git push
 ```
 
-5. 
+5. Open Obsidian.
+6. Open the Command Palette.
+7. Create a backup with Obsidian Git.
+8. You should see your repo in GitHub!
