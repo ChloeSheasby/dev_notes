@@ -8,6 +8,7 @@ Command Line
 ```
 git fetch --all 
 ```
+
 VS Code: Source Control ... &rarr; Pull, Push &rarr; Fetch From All Remotes &rarr; origin/main
 
 ### 2. Count your commits on your branch.
