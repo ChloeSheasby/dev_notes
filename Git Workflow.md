@@ -4,7 +4,10 @@
 ##### If you are worried about accidentally messing up your branch or if you are about to do something risky, you can always back it up with `git branch backup`.
 
 ### 1. Fetch from remote.
-Command Line: `git fetch --all 
+Command Line
+```
+git fetch --all 
+```
 VS Code: Source Control ... &rarr; Pull, Push &rarr; Fetch From All Remotes &rarr; origin/main
 
 ### 2. Count your commits on your branch.
@@ -19,8 +22,14 @@ This is to save the squash locally.
 Command Line:
 ```
 git add .
-
+git commit -m "squashed commits into one"
 ```
+
+VS Code:
+- Stage changes.
+- Commit message.
+- Push.
+
 
 Git flow: fetch from remote, squash commits (+ do a local commit w/ message), force push to remote, rebase onto dev branch, force push, open a PR.  
 Note: backup before doing anything risky.
