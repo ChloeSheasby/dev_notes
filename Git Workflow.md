@@ -1,5 +1,8 @@
 
 When you are ready to make a PR:
+
+##### If you are worried about accidentally messing up your branch, you can always back it up with `git branch backup`.
+
 ### Fetch from remote.
 Command Line: `git fetch --all 
 VS Code: Source Control ... &rarr; Pull, Push &rarr; Fetch From All Remotes &rarr; origin/main
@@ -12,5 +15,6 @@ Option 2: I haven't figured out the command line version lol.
 `git reset --soft HEAD~<number of commits to squash>`
 
 ### Do a local commit with a message.
+This is to save the squash locally.
 Git flow: fetch from remote, squash commits (+ do a local commit w/ message), force push to remote, rebase onto dev branch, force push, open a PR.  
 Note: backup before doing anything risky.
