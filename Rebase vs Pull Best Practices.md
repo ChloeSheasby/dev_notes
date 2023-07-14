@@ -29,15 +29,14 @@ Here is how to do that:
 	1. "Incoming" changes will be from your feature branch.
 	2. "Current" changes will be from the latest **main** branch.
 6. Force push back to your remote branch. (It's safer to do this command line only.)
-	1. `git push -f origin <your-branch-name>`
+	1. `git push -f origin <your-branch-name>` 
 
 ## Visuals of Rebasing vs Merging/Pulling
 
-![[image-5.png]]
+![[attachments/git-merge-vs-rebase1.png]]
 [Differences Between Git Merge and Rebase — and Why You Should Care](https://blog.git-init.com/differences-between-git-merge-and-rebase-and-why-you-should-care/)
 
 <br/>
 
-
-![[git-merge-vs-rebase 1.png]]
+![[attachments/git-merge-vs-rebase2.png|300]]
 [Git Merge vs Rebase](https://www.softwaremeadows.com/posts/graphic_-_git_merge_vs_rebase/)
