@@ -46,12 +46,12 @@ ssh -i "<key pair name>.pem" ubuntu@<AWS instance public dns>
 
 ## Install Web Server Software
 
+- The web document root for your web server is **var/www/html**.
+- Enter the following commands one at a time while connected to your AWS Instance.
+
 ### LAMP
 
 *Linux, Apache, MySQL, and PHP*
-
-- The web document root for your web server is **var/www/html**.
-- Enter the following commands one at a time while connected to your AWS Instance.
 
 ```
 sudo apt-get update
@@ -97,5 +97,42 @@ sudo service mysql stop
 ```
 
 ```
+sudo service mysql start
+```
+
+```
+mysql_secure_installation - config MySQL
+```
+- Enter your password for the MySQL root user.
+- Answer the following questions:
+	- *Would you like to setup VALIDATE PASSWORD component?* Y
+	- *Password strength validation policy:* 0
+	- *Change the password for root?* N
+	- *Remove anonymous users?* Y
+	- *Disallow root login remotely?* Y
+	- *Remove test database and access to it?* Y
+	- *Reload privilege tables now?* Y
 
 ### phpMyAdmin for MySQL
+
+```
+sudo apt-get install phpmyadmin
+```
+- When it asks to continue, allow it to.
+- *Web Server to configure?* apache2
+- *Configure database for phpmyadmin?* Yes
+- Enter a password you want to use for application access.
+	- This often causes an error.
+	- I don't know how to ensure an error doesn't happen.
+	- If an error occurs, select **ignore**.
+
+```
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phmyadmin.conf
+```
+
+```
+sudo a2enconf phpmyadmin
+```
+
+```
+sudo /etc/init.d/apache2 reload
