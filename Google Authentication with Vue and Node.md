@@ -1,7 +1,7 @@
 - The first instructions about setting up a Google client come from https://medium.com/@jebasuthan/signup-with-google-using-vuejs-11c9d4428250.
 - The example code come from the Tutorial Application:
 	- [Tutorial Frontend Vue2](https://github.com/OC-ComputerScience/tutorial-frontend-vue2)
-	- [Tutorial Backend](https://github.com/OC-ComputerScience/tutorial-backend
+	- [Tutorial Backend](https://github.com/OC-ComputerScience/tutorial-backend)
 
 ## Overview
 
@@ -120,134 +120,48 @@ DB_NAME = "your-database-name"
 
 3. You can find your Google Client ID and Google Client Secret by opening the .json file you downloaded earlier when setting up your client or by going to the [Google Developer Console](https://console.developers.google.com/).
 4. Make sure that your [.gitignore](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/.gitignore) file includes .env so that the .env file will never be pushed to your GitHub repository.
-    
+5. You will need seven secrets in your backend repository:
 
-1. We don’t want sensitive information like this in a public online repository
-    
-2. We will instead make secrets on GitHub so that this information is secure
-    
-
-3. Make secrets in your GitHub repository.
-    
-
-1. You will need seven secrets in your frontend repository
-    
-
-1. SERVER_SSH_KEY
-    
-
-1. Like you did for the last project
-    
-
-3. AWS_DB_HOST
-    
-4. AWS_DB_NAME
-    
-5. AWS_DB_PW
-    
-6. AWS_DB_USER
-    
-7. CLIENT_ID
-    
-8. CLIENT_SECRET
-    
-
-3. The four AWS variables will be the host, name, password, and user for the database information on your AWS server.
-    
-
-  
-
-![Graphical user interface, application, Teams
-Description automatically generated](https://lh3.googleusercontent.com/ScjZDwF-2VUH1vrNg_vkGeXuC1zgJIE1Hf-5lx6Ks4Svbgg8vSphgtAH2a6pTv9s9azj3eJpGaq4D0dy9xYL7qK1VO7csViimzK-_3fh1XLi0LS4cBgXDOuuMtlyygNtWao2QxlkzZ1GqnIAT2Y9cw)
-
-  
-
-4. Fix your db.config.js file.
-    
-
-1. See example in the [config/db.config.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/config/db.config.js) file.
-    
-2. We want this config file to now get data from the .env file instead of hardcoding it.
-    
-
-6. Create a user table.
-    
-
-1. See examples in the [user.model.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/models/user.model.js), [user.controller.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/controllers/user.controller.js), and [user.routes.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/routes/user.routes.js) files.
-    
-
+```
+SERVER_SSH_KEY
+AWS_DB_HOST
+AWS_DB_NAME
+AWS_DB_PW
+AWS_DB_USER
+CLIENT_ID
+CLIENT_SECRET
+```
+- The four AWS variables will be the host, name, password, and user for the database information on your AWS server.
+6. Fix your db.config.js file.
+	1. See example in the [config/db.config.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/config/db.config.js) file.
+	2. We want this config file to now get data from the .env file instead of hardcoding it.
+7. Create a user table.
+	1. See examples in the [user.model.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/models/user.model.js), [user.controller.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/controllers/user.controller.js), and [user.routes.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/routes/user.routes.js) files.
 8. Create a session table.
-    
-
-1. See example in the [session.model.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/models/session.model.js) file.
-    
-2. You don’t need a routes or controller file for the session table.
-    
-
-10. Create an auth.config.js file.
-    
-
-1. See example in the [config/auth.config.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/config/auth.config.js) file.
-    
-2. This will help us create a JSON web token later.
-    
-
-12. Create login and logout functions.
-    
-
-1. See example in the [auth.controller.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/controllers/auth.controller.js) file.
-    
-2. This is where a user will be authenticated through Google and where we will add users to the user table.
-    
-3. This is also where we will add sessions to the sessions table and create a JSON web token for each session.
-    
-4. After a user has been created or found, and a session has been created, we will send whatever information we want to be saved to the frontend.
-    
-5. When the frontend receives that information, it saves it to the store.
-    
-
-14. Create routes to the login and logout functions.
-    
-
-1. See example in the [auth.routes.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/routes/auth.routes.js) file.
-    
-2. You do not need any of the authorization code. That only applies if you are integrating something like the Google calendar API.
-    
-
-16. Create an authorization.js file.
-    
-
-1. See example in the [authorization/authorization.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/authorization/authorization.js) file.
-    
-2. This will help us limit users to not be able to send requests if their session has timed out.
-    
-3. You can use this same idea to limit different roles from accessing different requests.
-    
-
-18. Add authorization to all routes.
-    
-
-1. See example in the [tutorial.routes.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/routes/tutorial.routes.js) file.
-    
-2. We want all our routes, besides login and logout, to require the session to be authorized before we send the request.
-    
-
-20. Add a service file.
-    
-
-1. See example in the [tutorial-backend.service](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/tutorial-backend.service) file.
-    
-
-22. Set up your [node-deploy.yml](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/.github/workflows/node-deploy.yml) so that the AWS server gets the secrets from GitHub, including the different variables for the AWS database.
-    
-23. Fix your [package.json](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/package.json) file.
-    
-
-1. We want to make sure that the bundle command in the script section makes sure that all parts of the backend are pushed to AWS, including our service file and our .env file.
-    
-2. Yes, we want our .env file on the AWS server.
-    
-
-
-
-**
+	1. See example in the [session.model.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/models/session.model.js) file.
+	2. You don’t need a routes or controller file for the session table.
+9. Create an auth.config.js file.
+	1. See example in the [config/auth.config.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/config/auth.config.js) file.
+	2. This will help us create a JSON web token later.
+10. Create login and logout functions.
+	1. See example in the [auth.controller.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/controllers/auth.controller.js) file.
+	2. This is where a user will be authenticated through Google and where we will add users to the user table.
+	3. This is also where we will add sessions to the sessions table and create a JSON web token for each session.
+	4. After a user has been created or found, and a session has been created, we will send whatever information we want to be saved to the frontend.
+	5. When the frontend receives that information, it saves it to the store.
+11. Create routes to the login and logout functions.
+	1. See example in the [auth.routes.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/routes/auth.routes.js) file.
+	2. You do not need any of the authorization code. That only applies if you are integrating something like the Google calendar API.
+12. Create an authorization.js file.
+	1. See example in the [authorization/authorization.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/authorization/authorization.js) file.
+	2. This will help us limit users to not be able to send requests if their session has timed out.
+	3. You can use this same idea to limit different roles from accessing different requests.
+13. Add authorization to all routes.
+	1. See example in the [tutorial.routes.js](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/app/routes/tutorial.routes.js) file.
+	2. We want all our routes, besides login and logout, to require the session to be authorized before we send the request.
+14. Add a service file.
+	1. See example in the [tutorial-backend.service](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/tutorial-backend.service) file.
+15. Set up your [node-deploy.yml](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/.github/workflows/node-deploy.yml) so that the AWS server gets the secrets from GitHub, including the different variables for the AWS database.
+16. Fix your [package.json](https://github.com/OC-ComputerScience/tutorial-backend/blob/dev/package.json) file.
+	1. We want to make sure that the bundle command in the script section makes sure that all parts of the backend are pushed to AWS, including our service file and our .env file.
+	2. Yes, we want our .env file on the AWS server.
