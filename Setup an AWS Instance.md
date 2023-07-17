@@ -136,3 +136,14 @@ sudo a2enconf phpmyadmin
 
 ```
 sudo /etc/init.d/apache2 reload
+```
+
+### Test Successful Installation
+
+- Go to your AWS instance's phpMyAdmin in a web browser:
+```
+http://<AWS instance public dns>/phpmyadmin
+```
+- Login with:
+	- Username: **root**
+	- Password: the one you set for phpMyAdmin
