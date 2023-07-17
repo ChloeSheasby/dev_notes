@@ -42,9 +42,60 @@ ssh -i "<key pair name>.pem" ubuntu@<AWS instance public dns>
 	2. Select your key pair file (.ppk).
 4. If you get "The host key is not cached for this server.", select **Accept**.
 5. You should be connected now!
-6. To close your connection, 
+6. To close your connection, close PuTTY.
 
 ## Install Web Server Software
 
 ### LAMP
+
+*Linux, Apache, MySQL, and PHP*
+
+- The web document root for your web server is **var/www/html**.
+- Enter the following commands one at a time while connected to your AWS Instance.
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install apache2
+```
+- When it asks to continue, allow it to.
+
+```
+sudo apt-get install mysql-server
+```
+- When it asks to continue, allow it to.
+
+```
+sudo apt-get install php
+```
+- When it asks to continue, allow it to.
+
+```
+sudo apt-get install libapache2-mod-php-y
+```
+
+```
+sudo /etc/ini.d/apache2 restart
+```
+
+```
+sudo mysql -u root -p
+```
+- Press Enter when it asks for a password.
+- You should get a `mysql>` prompt.
+- Enter the following to change your password.
+- *Note: this doesn't work and I don't know why yet*
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
+```
+- Exit the `mysql>` prompt with `Exit`.
+
+```
+sudo service mysql stop
+```
+
+```
+
 ### phpMyAdmin for MySQL
