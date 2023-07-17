@@ -64,24 +64,20 @@ VUE_APP_API_URL = 'https://accounts.google.com/gsi/client'
 5. Make sure that your [.gitignore](https://github.com/OC-ComputerScience/tutorial-frontend-vue2/blob/dev/.gitignore) file includes .env so that the .env file will never be pushed to your GitHub repository
 	1. We don’t want sensitive information like this in a public online repository.
 	2. We will instead make secrets on GitHub so that this information is secure.
-    
-
 3. Make secrets in your GitHub repository.
-    
+	1. You will need four secrets in your frontend repository
+```
+SERVER_SSH_KEY
+```
 
-1. You will need four secrets in your frontend repository
-    
+```
+VUE_APP_API_URL
+```
+- If you are using Vue 3 with Vite, you'll have to name this with VITE instead of VUE i.e.
+```
+VUE_APP_CLIENT_ID
+```
 
-1. SERVER_SSH_KEY
-    
-
-1. Like you did for the last project
-    
-
-3. VUE_APP_API_URL
-    
-4. VUE_APP_CLIENT_ID
-    
 
 1. Make sure you don’t put this in quotes in GitHub – Google doesn’t like that for some reason.
     
