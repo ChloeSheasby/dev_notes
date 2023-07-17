@@ -23,16 +23,44 @@
 3. On the left, click Personal access tokens.
 4. Click Tokens (classic).
 	1. I'm not sure about Fine-grained tokens yet.
-5. . Click Generate new token.
-    
-5. Name your token and select an expiration date.
-    
-6. To use your token to access repositories from the command line, select repo.
-    
-7. Click Generate token.
-    
-8. Copy the personal access token because you won’t be able to see it again!
-    
-9. Treat the personal access token like a password and put it in a safe place.
-    
+5. Click Generate new token.
+6. Name your token and select an expiration date.
+7. To use your token to access repositories from the command line, select repo.
+8. Click Generate token.
+9. Copy the personal access token because you won’t be able to see it again!
+10. Treat the personal access token like a password and put it in a safe place.
 
+## Set Token for Personal Machine Use
+
+*This will save your personal access token on your machine’s list of credentials so that if you are logging in online, etc., you will be authenticated with your token instead of your GitHub password.*
+
+[https://stackoverflow.com/questions/68779331/use-token-to-push-some-code-to-github-support-for-password-authentication-was](https://stackoverflow.com/questions/68779331/use-token-to-push-some-code-to-github-support-for-password-authentication-was)
+
+#### Mac
+1. Go to the Keychain Access application.
+2. Press the Login tab.
+3. Find the GitHub key.
+4. Double click on it.
+5. Check Show Password.
+6. Change the password to your personal access token.
+
+#### Windows
+1. Go to Control Panel --> User Accounts --> Credential Manager.
+2. Edit the Generic Credential of GitHub.
+3. Change the password to the personal access token.
+
+## Set Token for Remote Access
+
+*This will save your personal access token for direct access to GitHub through command line or on applications like VS Code.*
+
+[https://stackoverflow.com/questions/66231282/how-to-add-a-github-personal-access-token-to-visual-studio-code](https://stackoverflow.com/questions/66231282/how-to-add-a-github-personal-access-token-to-visual-studio-code)
+
+1. Open a command line window, like in VS Code.
+2. Set the current directory to your project folder.
+3. Run the following command to set remote access through your personal access token:
+   
+```
+git remote set-url origin https://<user>:<token>@github.com/<user>/<repo>.git
+```
+
+4. Now try and push your code to GitHub again.
