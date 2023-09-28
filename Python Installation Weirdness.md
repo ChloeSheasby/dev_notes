@@ -1,4 +1,4 @@
-
+# Python Installation Weirdness
 ## Windows
 
 You can have multiple versions on Python on your machine, but it's tricky to get the right one as the main one.

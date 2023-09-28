@@ -1,3 +1,5 @@
+# Google Authentication with Vue and Node
+
 - The first instructions about setting up a Google client come from https://medium.com/@jebasuthan/signup-with-google-using-vuejs-11c9d4428250.
 - The example code come from the Tutorial Application:
 	- [Tutorial Frontend Vue2](https://github.com/OC-ComputerScience/tutorial-frontend-vue2)

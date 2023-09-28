@@ -1,3 +1,5 @@
+# Rebase vs Pull Best Practices
+
 _I learned this from Isaac Hildebrandt._
 
 ## Why Pulling From Main Is Bad

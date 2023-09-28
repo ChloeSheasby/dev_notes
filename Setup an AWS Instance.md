@@ -1,3 +1,5 @@
+# Setup an AWS Instance
+
 ## Create Your AWS Instance
 
 - You can create whatever AWS instance you want. 

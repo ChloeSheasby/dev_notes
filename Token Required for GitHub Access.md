@@ -1,3 +1,5 @@
+# Token Required for GitHub Access
+
 *Here are instructions for what to do if you receive an error from Git requiring you to have a **personal access token** set up instead of using **password authentication**.*
 
 ## The Error
