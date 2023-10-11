@@ -19,7 +19,7 @@ Here is why rebasing is much better:
 
 ## How To Rebase To Main
 Here is how to do that:
-1. (Optional) If you are worried about accidentally messing up your branch, you can always back it up with `git branch backup`.
+1. (Optional) If you are worried about accidentally messing up your branch, you can always back it up by making a backup branch.
 2. (Optional) You can squash all of your commits together so that you only have to resolve merge conflicts on one commit instead of going through the same (or almost the same) files for a million commits: `git reset --soft HEAD~<number of commits to squash>`
 3. Rebase to main.
 	1. Command Line: `git rebase origin/main` 

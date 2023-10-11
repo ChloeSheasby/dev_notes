@@ -2,7 +2,7 @@
 
 ## When you are ready to make a PR:
 
-##### If you are worried about accidentally messing up your branch or if you are about to do something risky, you can always back it up with `git branch backup`.
+##### If you are worried about accidentally messing up your branch or if you are about to do something risky, you can always back it up by making a backup branch.
 
 ### 1. Fetch from remote.
 **Command Line**
