@@ -10,7 +10,6 @@
 git fetch --all 
 ```
 
-<\br>
 **VS Code**
 Source Control ... &rarr; Pull, Push &rarr; Fetch From All Remotes &rarr; origin/main
 
