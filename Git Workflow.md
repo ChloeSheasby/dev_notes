@@ -14,8 +14,13 @@ git fetch --all
 Source Control ... &rarr; Pull, Push &rarr; Fetch From All Remotes &rarr; origin/main
 
 ### 2. Count your commits on your branch.
-Option 1: Use the [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) VS Code extension to manually count the number of commits on your branch.
-Option 2: I haven't figured out the command line version lol.
+**Command Line**
+```
+git rev-list --count --first-parent <parent>..<branch_name>
+```
+
+**VS Code**
+Use the [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) VS Code extension to manually count the number of commits on your branch.
 
 ### 3. Squash commits.
 ```
