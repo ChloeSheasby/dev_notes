@@ -22,7 +22,7 @@ git rev-list --count --first-parent <parent>..<branch_name>
 **VS Code**
 Use the [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) VS Code extension to manually count the number of commits on your branch.
 
-### 3. Squash commits.
+### 3. Reset commits to create a singular one (similar to squashing).
 ```
 git reset --soft HEAD~<number of commits to squash>
 ```
@@ -48,7 +48,7 @@ git push -f origin <name of branch>
 ### 6. Rebase onto the dev branch.
 **Command Line**
 ```
-git rebase origin/dev
+git rebase -i origin/dev
 ``` 
 
 **VS Code** 
